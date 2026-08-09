@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MV TEACHES - British English</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ==========================================
+         PUBLIC WEBSITE VIEW
+         ========================================== -->
+    <div id="public-view">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="nav-brand">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    MV <span>TEACHES</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">الرئيسية</a></li>
+                    <li><a href="#programs">البرامج التعليمية</a></li>
+                    <li><a href="#pricing">الأسعار والباقات</a></li>
+                    <li><a href="#apply">انضم كمعلم</a></li>
+                    <li><a href="#contact">تواصل معنا</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="btn btn-primary" onclick="togglePortal()">دخول الطالب</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badges">
+                        <span class="badge"><i class="fa-solid fa-earth-americas"></i> تعليم بريطاني أصيل</span>
+                        <span class="badge"><i class="fa-solid fa-laptop"></i> 100% أونلاين</span>
+                    </div>
+                    <h1>ارتقِ بمستواك في اللغة الإنجليزية مع <span>MV TEACHES</span></h1>
+                    <p>أكاديمية تعليمية رقمية بالكامل، نقدم حصصاً مباشرة عبر Zoom مع نخبة من المعلمين البريطانيين المحترفين.</p>
+                    
+                    <div class="branch-selector">
+                        <p><strong>اختر الفرع الخاص بك لعرض الأسعار:</strong></p>
+                        <div class="branch-options">
+                            <button class="branch-btn active" onclick="setBranch('jordan')">🇯🇴 فرع الأردن</button>
+                            <button class="branch-btn" onclick="setBranch('palestine')">🇵🇸 فرع فلسطين</button>
+                        </div>
+                    </div>
+                    
+                    <br><br>
+                    <a href="#programs" class="btn btn-secondary">استكشف البرامج</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs Section -->
+        <section id="programs" class="section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2>مساراتنا التعليمية</h2>
+                    <p>برامج مصممة خصيصاً لتناسب جميع المستويات من المبتدئ إلى المتقدم (A1 - C2)</p>
+                </div>
+                
+                <div class="programs-grid">
+                    <div class="program-card">
+                        <div class="program-level">A1/A2</div>
+                        <h3>المستوى التأسيسي</h3>
+                        <p>بناء الثقة في التحدث وفهم الأساسيات في اللغة الإنجليزية للمبتدئين.</p>
+                        <a href="#pricing" class="text-secondary font-weight-bold">عرض الأسعار <i class="fa-solid fa-arrow-left"></i></a>
+                    </div>
+                    <div class="program-card">
+                        <div class="program-level">B1/B2</div>
+                        <h3>المستوى المتوسط</h3>
+                        <p>تطوير مهارات المحادثة والاستماع والمشاركة في نقاشات متنوعة.</p>
+                        <a href="#pricing" class="text-secondary font-weight-bold">عرض الأسعار <i class="fa-solid fa-arrow-left"></i></a>
+                    </div>
+                    <div class="program-card">
+                        <div class="program-level">C1/C2</div>
+                        <h3>المستوى المتقدم</h3>
+                        <p>إتقان اللغة والوصول لمرحلة الطلاقة مع التركيز على المصطلحات الدقيقة.</p>
+                        <a href="#pricing" class="text-secondary font-weight-bold">عرض الأسعار <i class="fa-solid fa-arrow-left"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing-wrapper section-padding">
+            <div class="container">
+                <div class="section-title pricing-title">
+                    <h2>الأسعار والباقات</h2>
+                    <p id="pricing-subtitle">نعرض حالياً الأسعار لفرع <strong class="text-accent">الأردن</strong></p>
+                </div>
+                
+                <div class="pricing-grid">
+                    <div class="price-card">
+                        <h3>الباقة الشهرية</h3>
+                        <div class="price-display">
+                            <span class="price-currency" id="curr-1">JOD</span>
+                            <span class="price-amount" id="price-1">45</span>
+                        </div>
+                        <p class="price-duration">شهرياً</p>
+                        <ul class="price-features">
+                            <li>8 حصص مباشرة شهرياً</li>
+                            <li>وصول كامل لبوابة الطالب</li>
+                            <li>امتحان تحديد مستوى مجاني</li>
+                        </ul>
+                        <button class="btn btn-outline" style="width: 100%">اشترك الآن</button>
+                    </div>
+                    
+                    <div class="price-card popular">
+                        <div class="popular-badge">الأكثر شعبية</div>
+                        <h3>الباقة الفضية</h3>
+                        <div class="price-display">
+                            <span class="price-currency" id="curr-2">JOD</span>
+                            <span class="price-amount" id="price-2">120</span>
+                        </div>
+                        <p class="price-duration">3 أشهر (خصم 10%)</p>
+                        <ul class="price-features">
+                            <li>24 حصة مباشرة</li>
+                            <li>وصول كامل لبوابة الطالب</li>
+                            <li>شهادة إتمام مستوى (PDF)</li>
+                            <li>تقييم شهري للمستوى</li>
+                        </ul>
+                        <button class="btn btn-primary" style="width: 100%">اشترك الآن</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teacher Application -->
+        <section id="apply" class="section-padding application-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>انضم إلى كادرنا التعليمي</h2>
+                    <p>نبحث عن معلمين بريطانيين مؤهلين للانضمام لفريقنا (نموذج التقديم)</p>
+                </div>
+                
+                <div class="form-container">
+                    <form onsubmit="event.preventDefault(); alert('تم إرسال الطلب بنجاح للوحة الإدارة!');">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>الاسم الكامل</label>
+                                <input type="text" class="form-control" placeholder="Full Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>الجنسية</label>
+                                <input type="text" class="form-control" placeholder="Nationality" value="British" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>المؤهل العلمي (CELTA/TESOL)</label>
+                                <select class="form-control">
+                                    <option>CELTA</option>
+                                    <option>TESOL</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>سنوات الخبرة</label>
+                                <input type="number" class="form-control" min="1" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>السيرة الذاتية (PDF)</label>
+                            <input type="file" class="form-control" accept=".pdf" required>
+                        </div>
+                        <div class="form-group">
+                            <label>رابط فيديو تعريفي (اختياري)</label>
+                            <input type="url" class="form-control" placeholder="https://youtube.com/...">
+                        </div>
+                        <button type="submit" class="btn btn-secondary">تقديم الطلب</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer style="background: var(--primary); color: white; padding: 40px 0; text-align: center;">
+            <div class="container">
+                <h3>MV TEACHES</h3>
+                <p style="opacity: 0.7; margin-top: 10px;">Copyright &copy; 2026. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- ==========================================
+         STUDENT PORTAL VIEW
+         ========================================== -->
+    <div id="student-portal" class="portal-layout hidden">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>MV <span>TEACHES</span></h2>
+                <div class="student-badge">بوابة الطالب</div>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" class="active"><i class="fa-solid fa-border-all"></i> <span>الرئيسية (لوحة التحكم)</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-video"></i> <span>حصصي</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-calendar-check"></i> <span>سجل الحضور</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-envelope-open-text"></i> <span>طلب اعتذار عن حصة</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-file-invoice-dollar"></i> <span>حسابي المالي</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-file-signature"></i> <span>امتحان تحديد المستوى</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-award"></i> <span>تقدمي / الشهادات</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-user-gear"></i> <span>الملف الشخصي</span></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="btn btn-outline" style="width: 100%; border-color: rgba(255,255,255,0.3); color: white;" onclick="togglePortal()">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i> تسجيل الخروج
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="portal-main">
+            <header class="portal-header">
+                <div class="header-search">
+                    <h2 class="text-primary">مرحباً بك، أحمد 👋</h2>
+                </div>
+                <div class="user-profile-mini">
+                    <div style="position: relative;">
+                        <i class="fa-solid fa-bell" style="font-size: 1.2rem; color: var(--text-muted);"></i>
+                        <span style="position: absolute; top: -5px; right: -5px; background: var(--danger); width: 8px; height: 8px; border-radius: 50%;"></span>
+                    </div>
+                    <div class="avatar">أ</div>
+                </div>
+            </header>
+
+            <div class="portal-content fade-in">
+                
+                <!-- Overview Stats -->
+                <div class="dash-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-calendar-day"></i></div>
+                        <div class="stat-info">
+                            <h3>2</h3>
+                            <p>حصص متبقية هذا الأسبوع</p>
+                        </div>
+                    </div>
+                    <div class="stat-card" style="border-right-color: var(--success);">
+                        <div class="stat-icon" style="color: var(--success);"><i class="fa-solid fa-circle-check"></i></div>
+                        <div class="stat-info">
+                            <h3>فعال</h3>
+                            <p>حالة الاشتراك (ينتهي في 20/09)</p>
+                        </div>
+                    </div>
+                    <div class="stat-card" style="border-right-color: var(--accent);">
+                        <div class="stat-icon" style="color: var(--accent);"><i class="fa-solid fa-chart-line"></i></div>
+                        <div class="stat-info">
+                            <h3>B1</h3>
+                            <p>المستوى الحالي</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Schedule Section (My Classes) -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <div class="panel-title">حصصي القادمة (حسب توقيت الأردن)</div>
+                        <a href="#" class="text-secondary font-weight-bold" style="text-decoration: none;">عرض الجدول الكامل</a>
+                    </div>
+                    
+                    <div class="class-list">
+                        <!-- Class 1: Active Zoom Link -->
+                        <div class="class-item" style="border-right: 4px solid var(--success);">
+                            <div class="class-info">
+                                <h4>محادثة متقدمة - Advanced Conversation</h4>
+                                <div class="class-meta">
+                                    <span><i class="fa-regular fa-clock"></i> اليوم, 6:00 مساءً</span>
+                                    <span><i class="fa-solid fa-chalkboard-user"></i> أ. سارة جونز (Sarah Jones)</span>
+                                </div>
+                            </div>
+                            <div class="class-action">
+                                <!-- Auto appears before class -->
+                                <button class="btn btn-zoom">
+                                    <span class="pulse-indicator"></span>
+                                    انضمام (Zoom)
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Class 2: Upcoming -->
+                        <div class="class-item">
+                            <div class="class-info">
+                                <h4>قواعد - Grammar B1</h4>
+                                <div class="class-meta">
+                                    <span><i class="fa-regular fa-clock"></i> غداً, 4:30 مساءً</span>
+                                    <span><i class="fa-solid fa-chalkboard-user"></i> أ. ديفيد سميث (David Smith)</span>
+                                </div>
+                            </div>
+                            <div class="class-action">
+                                <span class="text-muted" style="font-size: 0.9rem; opacity: 0.7;">يظهر الرابط قبل 15 دقيقة</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions Layout (Bottom half) -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
+                    <!-- Apology form preview -->
+                    <div class="panel">
+                        <div class="panel-header">
+                            <div class="panel-title">طلب اعتذار عن غياب</div>
+                        </div>
+                        <form onsubmit="event.preventDefault(); alert('تم رفع العذر وسيتم مراجعته تلقائياً.');">
+                            <div class="form-group">
+                                <label style="font-size: 0.9rem;">اختر الحصة</label>
+                                <select class="form-control">
+                                    <option>قواعد - الغد 4:30 م</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label style="font-size: 0.9rem;">سبب الاعتذار</label>
+                                <textarea class="form-control" rows="2" placeholder="اكتب السبب هنا..."></textarea>
+                            </div>
+                            <button class="btn btn-secondary" style="width: 100%; padding: 8px;">إرسال العذر</button>
+                        </form>
+                    </div>
+
+                    <!-- Financial Preview -->
+                    <div class="panel">
+                        <div class="panel-header">
+                            <div class="panel-title">الملخص المالي</div>
+                        </div>
+                        <div style="background: rgba(164, 16, 52, 0.05); padding: 20px; border-radius: 8px; border: 1px dashed var(--secondary);">
+                            <h4 style="color: var(--primary); margin-bottom: 10px;">الباقة الفضية (الأردن)</h4>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+                                <span class="text-muted">المدفوعات السابقة</span>
+                                <strong>120 JOD</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                                <span class="text-muted">تاريخ التجديد</span>
+                                <strong>20/09/2026</strong>
+                            </div>
+                            <button class="btn btn-primary" style="width: 100%; padding: 8px;">تجديد الاشتراك (بوابة الدفع)</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
