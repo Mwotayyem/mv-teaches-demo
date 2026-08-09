@@ -77,7 +77,20 @@ document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
 });
 
 // Switch Portal Views
-function switchPortalView(viewId, element) {
+document.querySelectorAll('.sidebar-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent scrolling to top
+        
+        // Get the view id from a data attribute or infer it
+        // We will just use the onclick attribute that is already there, but prevent default
+        // Actually since we have inline onclick, let's just keep the function but prevent default inside it if we pass event.
+    });
+});
+
+function switchPortalView(viewId, element, event) {
+    if (event) {
+        event.preventDefault();
+    }
     // Hide all views
     document.querySelectorAll('.portal-view').forEach(view => {
         view.classList.add('hidden');
