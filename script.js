@@ -18,17 +18,17 @@ const pricingData = {
     }
 };
 
-// Toggle between Public Website and Student Portal
+// Toggle between Public Website and Student Portal (Deprecated)
 function togglePortal() {
-    if (publicView.classList.contains('hidden')) {
-        // Show Public
-        publicView.classList.remove('hidden');
-        studentPortal.classList.add('hidden');
-        window.scrollTo(0, 0);
-    } else {
-        // Show Portal
-        publicView.classList.add('hidden');
-        studentPortal.classList.remove('hidden');
+    if (publicView && studentPortal) {
+        if (publicView.classList.contains('hidden')) {
+            publicView.classList.remove('hidden');
+            studentPortal.classList.add('hidden');
+            window.scrollTo(0, 0);
+        } else {
+            publicView.classList.add('hidden');
+            studentPortal.classList.remove('hidden');
+        }
     }
 }
 
@@ -76,34 +76,11 @@ document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Switch Portal Views
+// Switch Portal Views (Deprecated for Multi-page approach)
 document.querySelectorAll('.sidebar-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault(); // Prevent scrolling to top
-        
-        // Get the view id from a data attribute or infer it
-        // We will just use the onclick attribute that is already there, but prevent default
-        // Actually since we have inline onclick, let's just keep the function but prevent default inside it if we pass event.
-    });
+    // Keeping links default behavior to navigate
 });
 
 function switchPortalView(viewId, element, event) {
-    if (event) {
-        event.preventDefault();
-    }
-    // Hide all views
-    document.querySelectorAll('.portal-view').forEach(view => {
-        view.classList.add('hidden');
-    });
-    
-    // Show target view
-    document.getElementById(viewId).classList.remove('hidden');
-    
-    // Update active class on sidebar
-    document.querySelectorAll('.sidebar-link').forEach(link => {
-        link.classList.remove('active');
-    });
-    if (element) {
-        element.classList.add('active');
-    }
+    // Deprecated
 }

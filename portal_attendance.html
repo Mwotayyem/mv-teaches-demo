@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سجل الحضور - بوابة الطالب - MV TEACHES</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="portal-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>MV <span>TEACHES</span></h2>
+                <div class="student-badge">بوابة الطالب</div>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="portal_dashboard.html" class="sidebar-link "><i class="fa-solid fa-border-all"></i> <span>الرئيسية (لوحة التحكم)</span></a></li>
+                    <li><a href="portal_classes.html" class="sidebar-link "><i class="fa-solid fa-video"></i> <span>حصصي</span></a></li>
+                    <li><a href="portal_attendance.html" class="sidebar-link active"><i class="fa-solid fa-calendar-check"></i> <span>سجل الحضور</span></a></li>
+                    <li><a href="portal_apology.html" class="sidebar-link "><i class="fa-solid fa-envelope-open-text"></i> <span>طلب اعتذار عن حصة</span></a></li>
+                    <li><a href="portal_finance.html" class="sidebar-link "><i class="fa-solid fa-file-invoice-dollar"></i> <span>حسابي المالي</span></a></li>
+                    <li><a href="portal_test.html" class="sidebar-link "><i class="fa-solid fa-file-signature"></i> <span>امتحان تحديد المستوى</span></a></li>
+                    <li><a href="portal_progress.html" class="sidebar-link "><i class="fa-solid fa-award"></i> <span>تقدمي / الشهادات</span></a></li>
+                    <li><a href="portal_profile.html" class="sidebar-link "><i class="fa-solid fa-user-gear"></i> <span>الملف الشخصي</span></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="index.html" class="btn btn-outline" style="width: 100%; border-color: rgba(255,255,255,0.3); color: white; display: block; text-align: center; text-decoration: none;">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i> تسجيل الخروج
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="portal-main">
+            <header class="portal-header">
+                <div class="header-search">
+                    <h2 class="text-primary">مرحباً بك، أحمد 👋</h2>
+                </div>
+                <div class="user-profile-mini">
+                    <div style="position: relative;">
+                        <i class="fa-solid fa-bell" style="font-size: 1.2rem; color: var(--text-muted);"></i>
+                        <span style="position: absolute; top: -5px; right: -5px; background: var(--danger); width: 8px; height: 8px; border-radius: 50%;"></span>
+                    </div>
+                    <div class="avatar" style="width: 40px; height: 40px; background: var(--secondary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">أ</div>
+                </div>
+            </header>
+            <div class="portal-content fade-in">
+                <h2 class="text-primary mb-4" style="margin-bottom: 20px;">سجل الحضور التاريخي</h2>
+                    <div class="panel">
+                        <table style="width: 100%; text-align: right; border-collapse: collapse;">
+                            <thead>
+                                <tr style="border-bottom: 2px solid #eee;">
+                                    <th style="padding: 10px;">التاريخ</th>
+                                    <th style="padding: 10px;">الحصة</th>
+                                    <th style="padding: 10px;">المعلم</th>
+                                    <th style="padding: 10px;">الحالة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 15px 10px;">15/08/2026</td>
+                                    <td>قواعد B1</td>
+                                    <td>أ. ديفيد سميث</td>
+                                    <td><span class="badge" style="background: var(--success); color: white;">حاضر</span></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 15px 10px;">12/08/2026</td>
+                                    <td>محادثة متقدمة</td>
+                                    <td>أ. سارة جونز</td>
+                                    <td><span class="badge" style="background: var(--warning); color: black;">مؤجلة (عذر)</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
