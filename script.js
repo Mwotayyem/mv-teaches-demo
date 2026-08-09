@@ -75,3 +75,22 @@ document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+// Switch Portal Views
+function switchPortalView(viewId, element) {
+    // Hide all views
+    document.querySelectorAll('.portal-view').forEach(view => {
+        view.classList.add('hidden');
+    });
+    
+    // Show target view
+    document.getElementById(viewId).classList.remove('hidden');
+    
+    // Update active class on sidebar
+    document.querySelectorAll('.sidebar-link').forEach(link => {
+        link.classList.remove('active');
+    });
+    if (element) {
+        element.classList.add('active');
+    }
+}
